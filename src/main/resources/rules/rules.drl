@@ -1,0 +1,16 @@
+package rules
+ 
+import com.javainuse.model.Product
+
+	rule "Offer for iron"
+	when 
+		productObject: Product(type=="iron")
+	then
+		productObject.setDiscount(50);
+	end
+	rule "Offer for metal"
+	when 
+		productObject: Product(type=="metal")
+	then
+		productObject.setDiscount(60);
+	end

@@ -1,0 +1,16 @@
+package rules
+ 
+import com.javainuse.model.Product
+
+	rule "Offer for semiconductor"
+	when 
+		productObject: Product(type=="semiconductor")
+	then
+		productObject.setDiscount(70);
+	end
+	rule "Offer for plastic"
+	when 
+		productObject: Product(type=="plastic")
+	then
+		productObject.setDiscount(65);
+	end
